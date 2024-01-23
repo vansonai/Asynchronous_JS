@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Master TypeScrip</h1>
+
+<script>
+    function start(step1, step2) {
+        setTimeout(() => {
+            console.log("Starting")
+            step1(step2);
+        }, 2000)
+    }
+
+   var doing =  function (step2) {
+        setTimeout(() => {
+            console.log("Doing")
+            step2();
+        }, 1500)
+    }
+
+   var done = function() {
+        setTimeout(() => {
+            setTimeout(() => {
+                console.log("Done")
+            })
+        }, 500)
+    }
+
+    start(doing, done);
+    // start();
+    // doing()
+    // done();
+
+</script>
+</body>
+</html>
